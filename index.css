@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===================
+    The main container
+====================== */
+.container {
+    max-width: 412px;
+    margin: 0 auto;
+}
+
+
+/* ===================
+    The top nav
+====================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.nav-icon {
+    height: 2rem;
+}
+
+
+/* ===================
+    The main content loaded avatar
+====================== */
+.main-container {
+    position: relative;
+}
+
+.main-avatar {
+    height: 90vh;
+    object-fit: cover;
+    display: block;
+    width: 97%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.dog-info {
+    margin-left: 1rem;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: .7rem;
+
+}
+.dog-name, .dog-age {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.dog-bio {
+    margin: 0;
+    padding-top: 5px;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+/* ===================
+    The badge action
+====================== */
+
+.badge {
+    position: absolute;
+    top: 40;
+    left: 20px;
+    transform: rotate(-30deg);
+    animation: shaking 2s;
+}
+@keyframes shaking {
+    0% {top: -100px; left: -50px; opacity: 0; transform: rotate(-0deg);}
+    5% {top: 40px; left: 20px; opacity: 1; transform: rotate(-30deg);}
+    10% {transform: rotate(-50deg);}
+    20% {transform: rotate(-20deg);}
+    30% {transform: rotate(-40deg);}
+    40% {transform: rotate(-25deg);}
+    50% {transform: rotate(-35deg);}
+    60% {transform: rotate(-27deg);}
+    70% {transform: rotate(-32deg);}
+    80% {transform: rotate(-30deg);}
+    100% {transform: rotate(-30deg);}
+}
+
+.badge-like,
+.badge-nope {
+    width: 143px;
+
+}
+
+
+/* ===================
+    The last part 'like' or 'skip'
+====================== */
+.action-icons {
+    text-align: center;
+    margin: 1rem 0;
+}
+.cross-icon {
+    width: 57px;
+}
+
+.like-icon {
+    width: 59px;
+}
+.cross-icon, .like-icon {
+    margin-left: 5px;
+    padding: 15px;
+    border-radius: 100%;
+}
+
+
+
+/* ===================
+    The hover state
+====================== */
+.like-icon:hover,
+.like-icon:active {
+    cursor: pointer;
+    background-color: rgb(227, 255, 254);
+}
+
+.cross-icon:hover,
+.cross-icon:active {
+    cursor: pointer;
+    background-color: rgb(255, 227, 224);
+}
