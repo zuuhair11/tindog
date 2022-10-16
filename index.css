@@ -40,7 +40,7 @@ nav {
 }
 
 .main-avatar {
-    height: 90vh;
+    height: 80%;
     object-fit: cover;
     display: block;
     width: 97%;
@@ -105,7 +105,7 @@ nav {
 ====================== */
 .action-icons {
     text-align: center;
-    margin: 1rem 0;
+    margin: .3rem 0;
 }
 .cross-icon {
     width: 57px;
