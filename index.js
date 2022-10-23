@@ -11,7 +11,17 @@ function getNewDog() {
     return nextDogData ? new Dog(nextDogData) : {};
 }
 
-likeButton.addEventListener('click', () => {
+// Render the like button when the user hit twic on the dog avatar
+document.body.addEventListener('dblclick', function(e) {
+    const target = e.target;
+    if(target.classList.contains('main-avatar')) {
+        renderLike();
+    }
+})
+
+likeButton.addEventListener('click', renderLike);
+
+function renderLike() {
     const isEmpty = Object.keys(dogs).length === 0;
     if(isEmpty) {
         // Remove the icone LIKE and NOPE
@@ -30,7 +40,7 @@ likeButton.addEventListener('click', () => {
     }
     
     render()
-});
+};
 
 
 crossButton.addEventListener('click', () => {
@@ -56,7 +66,7 @@ crossButton.addEventListener('click', () => {
 
 
 function clearUp() {
-    document.querySelector('.action-icons').style.display = 'none';
+    // document.querySelector('.action-icons').style.display = 'none';
     setTimeout(() => {
         window.location.reload();
     }, 1000);
